@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Login V15</title>
+	<title>banque du peuple</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -38,7 +38,7 @@
 					</span>
 				</div>
 
-				<form class="login100-form validate-form"  method="POST"  action="controller/userController.php" >
+				<form class="login100-form validate-form"  method="POST"  action="src/controller/userController.php" >
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
 						<span class="label-input100">login</span>
 						<input class="input100" type="text" name="login" placeholder="Enter login">

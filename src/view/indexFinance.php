@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Imperial Boootstrap Template</title>
+    <title>banque du peuple</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -29,14 +29,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+    <link href="../../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../lib/animate-css/animate.min.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
 
     <!-- =======================================================
       Theme Name: Imperial
@@ -47,14 +47,14 @@
 </head>
 
 <body>
-<div id="preloader"></div>
+<!--<div id="preloader"></div>!-->
 <?php
 session_start();
-require_once '/model/modelCompte.php';
-require_once '/model/modelClient.php';
+require_once '../model/modelCompte.php';
+require_once '../model/modelClient.php';
 if ($_SESSION == null)
 {
-    header("location:/index.php");
+    header("location:../../index.php");
 }
 else
 {
@@ -114,19 +114,19 @@ include '/footer.php';
 <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 <!-- Required JavaScript Libraries -->
-<script src="lib/jquery/jquery.min.js"></script>
-<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/superfish/hoverIntent.js"></script>
-<script src="lib/superfish/superfish.min.js"></script>
-<script src="lib/morphext/morphext.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/stickyjs/sticky.js"></script>
-<script src="lib/easing/easing.js"></script>
+<script src="../../lib/jquery/jquery.min.js"></script>
+<script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../lib/superfish/hoverIntent.js"></script>
+<script src="../../lib/superfish/superfish.min.js"></script>
+<script src="../../lib/morphext/morphext.min.js"></script>
+<script src="../../lib/wow/wow.min.js"></script>
+<script src="../../lib/stickyjs/sticky.js"></script>
+<script src="../../lib/easing/easing.js"></script>
 
 <!-- Template Specisifc Custom Javascript File -->
-<script src="js/custom.js"></script>
+<script src="../../js/custom.js"></script>
 
-<script src="contactform/contactform.js"></script>
+<script src="../../contactform/contactform.js"></script>
 
 
 </body>

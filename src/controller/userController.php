@@ -14,12 +14,12 @@ if (isset($_POST['connexion']))
             $_SESSION['prenom'] = $user['prenom'];
         */
         $_SESSION['idUser'] = $user['id'];
-        header('location:../indexFinance.php');
+        header('location:../view/indexFinance.php');
         echo  "ok";
     }
     else
     {
-        header('location:/index.php?connexion=0');
+        header('location:../../index.php?connexion=0');
         return;
         echo "pas connecte";
     }
@@ -29,6 +29,6 @@ if (isset($_GET['deconnexion']))
 {
     session_unset();
     $_SESSION = array();
-    header('location:../index.php');
+    header('location:../../index.php');
 }
 ?>

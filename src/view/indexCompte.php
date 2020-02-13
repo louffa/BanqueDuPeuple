@@ -14,7 +14,7 @@
 
         <div class="row">
             <?php
-            require_once '/model/modelCompte.php';
+            require_once '../model/modelCompte.php';
             $comptesAvecCllients = getAllCompteAvecClients();
             ?>
             <br>
@@ -41,11 +41,11 @@
         <td>'.$value["nom"].' '.$value["prenom"].'</td>';
                     if ($value['etat']=='1') {
                         echo '<td> 
-            <a href="/controller/compteController.php?num='.$value["numero"].'">LISTE DES OP</a>  
+            <a href="../controller/compteController.php?num='.$value["numero"].'">LISTE DES OP</a>  
             </td></tr>';
                     }else{
                         echo '<td> 
-            <a href="/controller/compteController.php?num='.$value["numero"].'">LISTE DES OP</a> 
+            <a href="../controller/compteController.php?num='.$value["numero"].'">LISTE DES OP</a> 
             </td></tr>';
                     }
 

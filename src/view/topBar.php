@@ -4,7 +4,7 @@
     <div class="container">
 
         <div id="logo" class="pull-left">
-            <a href="?view=accueil"><img src="img/logo.png" alt="" title="" /></img></a>
+            <a href="?view=accueil"><img src="../../img/logo.png" alt="" title="" /></img></a>
             <!-- Uncomment below if you prefer to use a text image -->
             <!--<h1><a href="#hero">Header 1</a></h1>-->
         </div>
@@ -17,7 +17,7 @@
                 <li><a href="?view=operation">Gestion operation</a></li>
                 <li><a href="?view=utilisateur" <?php if($_SESSION['profil'] == 'caissier'){echo  'hidden';} ?>>gestion Utilisateur</a></li>
 
-                <li><a a href="/controller/userController.php?deconnexion=1">Deconnexion</a></li>
+                <li><a a href="../controller/userController.php?deconnexion=1">Deconnexion</a></li>
             </ul>
         </nav>
         <!-- #nav-menu-container -->

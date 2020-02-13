@@ -11,7 +11,7 @@
         <div class="row">
 
             <?php
-            require_once '/model/modelClient.php';
+            require_once '../model/modelClient.php';
             $clients = getAllClients();
             //var_dump($clients);
             ?>
@@ -39,9 +39,9 @@
                             <td><?=$client['prenom'] ?></td>
                             <td><?=$client['adresse'] ?></td>
                             <td><?=$client['tel'] ?></td>
-                            <td><a name="nouveauCompteB" href="/controller/clientController.php?num=<?= $client["id"] ?>">Ajouter compte/</a>
+                            <td><a name="nouveauCompteB" href="../controller/clientController.php?num=<?= $client["id"] ?>">Ajouter compte/</a>
 
-                                <a href="/controller/clientController.php?supClient=<?= $client['id'] ?>" >Supprimer </a>
+                                <a href="../controller/clientController.php?supClient=<?= $client['id'] ?>" >Supprimer </a>
 
                             </td>
 
@@ -74,7 +74,7 @@
                         //var_dump($teste);
 
                         ?>
-                        <form method="POST" action="/controller/compteController.php?ajoutCC=<?=$numb?>" >
+                        <form method="POST" action="../controller/compteController.php?ajoutCC=<?=$numb?>" >
                             <div style="text-align: center"> <fieldset id="newAccount">
                                     <legend>INFOS COMPTE</legend>
                                     <table class="table table-striped">

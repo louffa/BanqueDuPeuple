@@ -17,9 +17,9 @@ if(isset($_POST['ajoutCompte'])){
         $numeroOp = genererNumeroOperation();
         if(depot($numeroOp, $dateCreation, $solde, $idCompte, $idTypeOperation, $idGestCompte) > 0)
         {
-            header('location:../indexFinance.php?view=nouveauCompte&ok=1');
+            header('location:../view/indexFinance.php?view=nouveauCompte&ok=1');
         }else{
-            header('location:../indexFinance.php?view=nouveauCompte&ok=0');
+            header('location:../view/indexFinance.php?view=nouveauCompte&ok=0');
         }
     }//*/
 }
@@ -27,14 +27,14 @@ if (isset($_GET['num'])) {
     $compte = findCompteByNumero($_GET['num']);
     if($compte == null)
     {
-        header('location:../indexFinance.php?view=operation&ok=0');
+        header('location:../view/indexFinance.php?view=operation&ok=0');
     }
     else
     {
         $operations = listOpByNomCompte($compte['id']);
         $_SESSION['compte'] = $compte;
         $_SESSION['operations'] = $operations;
-        header('location:../indexFinance.php?view=operation&ok=1');
+        header('location:../view/indexFinance.php?view=operation&ok=1');
     }
 }
 
@@ -68,9 +68,9 @@ if (isset($_GET['test'])) {
     $idCompte=$_GET['test'];
     //echo "$idCompte";
     if (modifierEtat($idCompte)> 0) {
-        header('location:../indexFinance.php?view=compte&ok=1');
+        header('location:../view/indexFinance.php?view=compte&ok=1');
     }else{
-        header('location:../indexFinance.php?view=compte&ok=0');
+        header('location:../view/indexFinance.php?view=compte&ok=0');
     }
 }
 ?>

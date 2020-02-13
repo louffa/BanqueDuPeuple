@@ -2,8 +2,8 @@
 
 <section id="services">
 <?php
-require_once '/model/modelCompte.php';
-require_once '/model/modelClient.php';
+require_once '../model/modelCompte.php';
+require_once '../model/modelClient.php';
 $numero = genererNumero();
 if(isset($_GET['ok'])){
     if ($_GET['ok']==1) {
@@ -13,7 +13,7 @@ if(isset($_GET['ok'])){
     }
 }
 ?>
-<form method="POST" action="/controller/compteController.php" id="nouveauCompte">
+<form method="POST" action="../controller/compteController.php" id="nouveauCompte">
     <div style="text-align: center">
     <fieldset id="newAccount">
         <legend>INFOS CLIENT</legend>

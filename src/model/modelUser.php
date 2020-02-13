@@ -23,9 +23,10 @@ if (isset($_POST['ajoutCompteUtilisateur'])) {
     $insrt=$bd->prepare("INSERT INTO utilisateur(nom,prenom,login,password,profil) VALUES (?, ?, ?, ?, ?)");
     $insrt->execute(array($nom,$prenom,$login,$password,$profil));
     if ($insrt >0) {
-        header('location:../accueil.php?team&ok=1');
+        //header('location:../accueil.php?team&ok=1');
+		header('location:../view/indexFinance.php');
     } else{
-        header('location:../accueil.php?team&ok=0');
+        header('location:../view/accueil.php?team&ok=0');
     }
 
 

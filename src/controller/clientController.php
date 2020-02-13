@@ -9,10 +9,10 @@ if (isset($_GET['num'])) {
     $numeroo=essai($test);
     var_dump($numeroo);
     if (essai($test)==0) {
-        header('location:../indexFinance.php?view=client&ok=1&numb=0');
+        header('location:../view/indexFinance.php?view=client&ok=1&numb=0');
     }
     else{
-        header('location:../indexFinance.php?view=client&ok=1&numb='.$test["numero"].'');
+        header('location:../view/indexFinance.php?view=client&ok=1&numb='.$test["numero"].'');
     }
 
 }
@@ -34,13 +34,13 @@ if (isset($_POST['rechercher'])) {
     {
         //echo "ok";
         //var_dump($recupClient);
-        header('location:../indexFinance.php?view=rechercheClient&trouve='.$recupClient[1].'&nom='.$recupClient[2].'&prenom='.$recupClient[3].'&adresse='.$recupClient[4].'&tel='.$recupClient[5].'&liste='.$recupListCompte);
+        header('location:../view/indexFinance.php?view=rechercheClient&trouve='.$recupClient[1].'&nom='.$recupClient[2].'&prenom='.$recupClient[3].'&adresse='.$recupClient[4].'&tel='.$recupClient[5].'&liste='.$recupListCompte);
     }
 
     else
     {
         //echo "pas ok";
-        header('location:../indexFinance.php?view=rechercheClient&trouve=0');
+        header('location:../view/indexFinance.php?view=rechercheClient&trouve=0');
     }
 }
 
@@ -76,10 +76,10 @@ if (isset($_POST["ajoutNewCompte"])) {
         if(depotNewCompte($numeroOp, $dateCreation, $solde, $idCompte, $idTypeOperation, $idGestCompte) > 0)
         {
             //echo "ok";
-            header('location:../indexFinance.php?view=client&o=1');
+            header('location:../view/indexFinance.php?view=client&o=1');
         }else{
             //echo "pas ok";
-            header('location:../indexFinance.php?view=client&o=0');
+            header('location:../view/indexFinance.php?view=client&o=0');
         }
     }
 
@@ -95,7 +95,7 @@ if (isset($_POST["ajoutNewCompte"])) {
 if (isset($_GET['supClient'])) {
     $idClient=$_GET['supClient'];
     if (supprimerClient($idClient)==1) {
-        header('location:../indexFinance.php?view=client');
+        header('location:../view/indexFinance.php?view=client');
 
     }
 }
@@ -108,7 +108,7 @@ if (isset($_GET['modifClient'])) {
     if (findClientByid($idcl)>0) {
 
         $_SESSION['info'] = $info;
-        header('location:../indexFinance.php?view=modifierClient&bon=1');
+        header('location:../view/indexFinance.php?view=modifierClient&bon=1');
     }
 }
 

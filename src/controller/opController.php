@@ -19,9 +19,9 @@ if (isset($_POST['ajoutOp'])) {
         {
             $operations = listOpByNomCompte($idCompte);
             $_SESSION['operations'] = $operations;
-            header('location:../indexFinance.php?view=operation&ok=1&op=1');
+            header('location:../view/indexFinance.php?view=operation&ok=1&op=1');
         }else{
-            header('location:../indexFinance.php?view=operation&ok=1&op=0');
+            header('location:../view/indexFinance.php?view=operation&ok=1&op=0');
         }
     }
     if ($typeOperation == 'retrait') {
@@ -29,9 +29,9 @@ if (isset($_POST['ajoutOp'])) {
         {
             $operations = listOpByNomCompte($idCompte);
             $_SESSION['operations'] = $operations;
-            header('location:../indexFinance.php?view=operation&ok=1&op=1');
+            header('location:../view/indexFinance.php?view=operation&ok=1&op=1');
         }else{
-            header('location:../indexFinance.php?view=operation&ok=1&op=0');
+            header('location:../view/indexFinance.php?view=operation&ok=1&op=0');
         }
     }
 }
@@ -41,7 +41,7 @@ if (isset($_GET['sup'])) {
     $numeroCompte = recupNumCompteByIdOp($opID);
     if (supprimerOP($opID)==0)
     {
-        header('location:../indexFinance.php?view=operation&ok=1&supp=0');
+        header('location:../view/indexFinance.php?view=operation&ok=1&supp=0');
     }
     else
     {

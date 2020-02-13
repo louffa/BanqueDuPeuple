@@ -24,7 +24,7 @@
             <div class="aligner" style="text-align: center">
                 <input type="text" name="numeroCompte" class=" " style="width: 300px" id="numeroCompte" placeholder="NUMERO DE COMPTE" value="<?= $numCompte ?>" onblur="recherche()">
             </div>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
             <?php
             if (isset($_GET['ok'])) {
                 if($_GET['ok'] == 0)
